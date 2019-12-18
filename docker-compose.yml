@@ -44,6 +44,7 @@ services:
     volumes:
       - ./db/data:/var/lib/mysql
       - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/sql/litemall.sql:/docker-entrypoint-initdb.d/litemall.sql
 
   adminer:
     image: adminer
